@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport"content="width=device-width">
+		<title>
+			网络配置选项 - M0x1n Tools
+		</title>
+		<style>
+			body{background:#f06d06}header,nav{text-align:center;background:#f06d06;margin:20px
+			0;padding:10px}nav a{text-decoration:none;background:#333;border-radius:5px;color:#f06d06;padding:3px
+			8px}
+		</style>
+	</head>
+	<a href="./"> 返回上层 </a>
+	<body>
+		<header>
+			<h1>
+				M0x1n DNS Hacker
+			</h1>
+			<h3>
+				劫持工具配置
+			</h3>
+		</header>
+		<nav role='navigation'>
+			<form name="my">
+			<input type="text" name="s" placeholder="请输入SSID" id="aa">
+			 <br>
+			<input type="text" name="p" placeholder="请输入密码" id="bb">
+			 <br>
+			 <br>
+			 <input type="button" value="提交" onclick="wifi()">
+		</form>
+		<script language="javascript">
+			function wifi()
+			{
+				var ssid = my.s.value;
+				var password = bb.value;
+				var xmlhttp=new XMLHttpRequest();
+				xmlhttp.open("GET","config/configs?ssid="+ssid+"&password="+password,true);
+				xmlhttp.send();
+				alert("您的WiFi为："+ssid+' '+"密码为："+password+"，当您看到指示灯长亮三秒则是连接成功。 PS：连续闪灯表明正在连接！");
+			}
+		</script>
+			<p>
+				<br>
+				<br>
+				br>
+				Var:αβγδεζηθ
+			</p>
+		</nav>
+	</body>
+</html>
