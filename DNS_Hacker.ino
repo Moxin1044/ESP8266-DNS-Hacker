@@ -259,13 +259,6 @@ void htmlConfig()
     }  
 }
 
-void htmlattack()
-{
-    
-    WiFi.softAP(ssid, password);
-  
-}
-
 void setup() {
   // 通电最先执行且只执行一次
   pinMode(LED_BUILTIN, OUTPUT); // 先给LED_BUILTIN递一包烟 
@@ -285,6 +278,7 @@ void loop() {
   // put your main code here, to run repeatedly:
     if(WiFistatus == 1) // 当检测是已经配置完毕时，则创建一个保险标识
     {
+       dnsServer.processNextRequest();
        // 完成配置状态灯
        // 每5秒检测一次连接状态
        if (WiFi.status() != WL_CONNECTED)// 如果在配置连接完毕后又断开，则取消配置且提醒。
